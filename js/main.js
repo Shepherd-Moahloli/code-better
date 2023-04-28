@@ -87,24 +87,26 @@ setInterval(() => {
 const elementRotate = document.getElementById("smaller");
 
 setInterval(() => {
-  elementRotate.style.transform =
-    "rotate(" + new Date().getMinutes() + "90deg)";
+  elementRotate.style.transform = "scale(" + new Date().getMinutes() + "%)";
 
-  if (elementRotate.style.transform === "rotate(90deg)") {
-    elementRotate.style.transform = "rotate(0deg)";
+  if (elementRotate.style.transform === "scale(1)") {
+    elementRotate.style.transform = "scale(0)";
   }
-
-  console.log(elementRotate.style.transform);
 }, 1000);
 
 const rotateSecond = document.getElementById("ballMinute");
 
 setInterval(() => {
-  rotateSecond.style.transform = "rotate(" + new Date().getSeconds() + "90deg)";
+  const thisisCrazy = (new Date().getSeconds() / 60) * 100;
+  rotateSecond.style.transform = "scale(" + "1" + thisisCrazy + "%) ";
 
-  if (rotateSecond.style.transform === "rotate(90deg)") {
-    rotateSecond.style.transform = "rotate(0deg)";
+  if (elementRotate.style.transform === "scale(%)") {
+    elementRotate.style.transform = "scale(100)";
   }
 
-  console.log(rotateSecond.style.transform);
+  console.log(
+    rotateSecond.style.transform,
+    elementRotate.style.transform,
+    percent
+  );
 }, 1000);
