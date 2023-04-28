@@ -38,7 +38,7 @@ main #firstBall {
 }
 
 main #secondBall {
-    width: 15rem;
+    width: 10rem;
     aspect-ratio: 1;
     border-radius: 100%;
     grid-column-start: 2;

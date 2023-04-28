@@ -87,7 +87,8 @@ setInterval(() => {
 const elementRotate = document.getElementById("smaller");
 
 setInterval(() => {
-  elementRotate.style.transform = "scale(" + new Date().getMinutes() + "%)";
+  const thislikeWow = (new Date().getMinutes() / 60) * 100;
+  elementRotate.style.transform = "scale(" + "1" + thislikeWow + "%) ";
 
   if (elementRotate.style.transform === "scale(1)") {
     elementRotate.style.transform = "scale(0)";
@@ -100,8 +101,8 @@ setInterval(() => {
   const thisisCrazy = (new Date().getSeconds() / 60) * 100;
   rotateSecond.style.transform = "scale(" + "1" + thisisCrazy + "%) ";
 
-  if (elementRotate.style.transform === "scale(%)") {
-    elementRotate.style.transform = "scale(100)";
+  if (rotateSecond.style.transform === "scale(1)") {
+    rotateSecond.style.transform = thisisCrazy;
   }
 
   console.log(
@@ -110,3 +111,16 @@ setInterval(() => {
     percent
   );
 }, 1000);
+
+const inside = document.getElementById("insideBall");
+
+setInterval(() => {
+  const goCrazy = (new Date().getHours() / 60) * 100;
+  inside.style.transform = "scale(" + "1" + goCrazy + "%) ";
+
+  if (inside.style.transform === "scale(1)") {
+    inside.style.transform = "scale(0)";
+  }
+}, 1000);
+
+console.log(inside);
