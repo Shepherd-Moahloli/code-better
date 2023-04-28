@@ -88,7 +88,7 @@ const elementRotate = document.getElementById("smaller");
 
 setInterval(() => {
   elementRotate.style.transform =
-    "rotate(" + new Date().getSeconds() + "90deg)";
+    "rotate(" + new Date().getMinutes() + "90deg)";
 
   if (elementRotate.style.transform === "rotate(90deg)") {
     elementRotate.style.transform = "rotate(0deg)";
@@ -100,10 +100,9 @@ setInterval(() => {
 const rotateSecond = document.getElementById("ballMinute");
 
 setInterval(() => {
-  rotateSecond.style.transform =
-    "rotate(" + new Date().getSeconds() + "900deg)";
+  rotateSecond.style.transform = "rotate(" + new Date().getSeconds() + "90deg)";
 
-  if (rotateSecond.style.transform === "rotate(900deg)") {
+  if (rotateSecond.style.transform === "rotate(90deg)") {
     rotateSecond.style.transform = "rotate(0deg)";
   }
 
