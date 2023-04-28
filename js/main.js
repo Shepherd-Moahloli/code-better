@@ -88,13 +88,24 @@ const elementRotate = document.getElementById("secondBall");
 
 setInterval(() => {
   elementRotate.style.transform =
-    "rotate(" + new Date().getSeconds() + "360deg)";
+    "rotate(" + new Date().getSeconds() + "180deg)";
 
-  if (elementRotate.style.transform === "rotate(360deg)") {
+  if (elementRotate.style.transform === "rotate(180deg)") {
     elementRotate.style.transform = "rotate(0deg)";
   }
+
+  console.log(elementRotate.style.transform);
 }, 1000);
 
-const secBall = document.getElementById("secondBall");
+const rotateSecond = document.getElementById("ball");
 
-console.log(secBall, secBall.clientHeight, secBall.clientWidth);
+setInterval(() => {
+  rotateSecond.style.transform =
+    "rotate(" + new Date().getSeconds() + "900deg)";
+
+  if (rotateSecond.style.transform === "rotate(900deg)") {
+    rotateSecond.style.transform = "rotate(0deg)";
+  }
+
+  console.log(rotateSecond.style.transform);
+}, 1000);

@@ -67,9 +67,8 @@ main #secondBall {
 
 
 main #ball{
-    width: 2rem;
+    width: 10rem;
     aspect-ratio: 1/1;
-    
     background-color: skyblue;
     border-radius: 100%;
     grid-column-start: 3;
@@ -81,6 +80,12 @@ main #ball{
     
 }
 
+main #ball #ballMinute {
+    width: 5rem;
+    aspect-ratio: 1/1;
+    background-color: #000;
+}
+/*
 @keyframes bounce {
     0%, 100%{
         top: -500px;
@@ -92,7 +97,7 @@ main #ball{
     }
 
 }
-
+*/
 main #hours, 
 main #minutes, 
 main #seconds {
@@ -164,9 +169,15 @@ main #seconds {
 }
 
 main #secondBall #smaller {
-    width: 3rem;
+    width: 5rem;
     aspect-ratio: 1/1;
-    background-color: red;
+    background-color: #000;
     border-radius: 100%;
     transition: all 1s ease-in-out;
+}
+
+main #secondBall #bigger {
+    width: 2rem;
+    aspect-ratio: 1/1;
+    background-color: #fff;
 }
