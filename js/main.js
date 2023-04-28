@@ -84,20 +84,20 @@ setInterval(() => {
   console.log(percent);
 }, 1000);
 
-const elementRotate = document.getElementById("secondBall");
+const elementRotate = document.getElementById("smaller");
 
 setInterval(() => {
   elementRotate.style.transform =
-    "rotate(" + new Date().getSeconds() + "180deg)";
+    "rotate(" + new Date().getSeconds() + "90deg)";
 
-  if (elementRotate.style.transform === "rotate(180deg)") {
+  if (elementRotate.style.transform === "rotate(90deg)") {
     elementRotate.style.transform = "rotate(0deg)";
   }
 
   console.log(elementRotate.style.transform);
 }, 1000);
 
-const rotateSecond = document.getElementById("ball");
+const rotateSecond = document.getElementById("ballMinute");
 
 setInterval(() => {
   rotateSecond.style.transform =

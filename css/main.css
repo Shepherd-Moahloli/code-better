@@ -81,9 +81,16 @@ main #ball{
 }
 
 main #ball #ballMinute {
-    width: 5rem;
+    width: 8rem;
     aspect-ratio: 1/1;
     background-color: #000;
+    display: flex;
+    place-items: center;
+    margin: 0 auto;
+    margin-top: 10%;
+    transition: all 0.5s ease-in;
+    
+
 }
 /*
 @keyframes bounce {
@@ -169,10 +176,12 @@ main #seconds {
 }
 
 main #secondBall #smaller {
-    width: 5rem;
+    width: 12rem;
     aspect-ratio: 1/1;
     background-color: #000;
-    border-radius: 100%;
+    margin: 0 auto;
+    margin-top: 20px;
+
     transition: all 1s ease-in-out;
 }
 
