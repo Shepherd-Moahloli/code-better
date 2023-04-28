@@ -43,7 +43,7 @@ main #secondBall {
     border-radius: 100%;
     grid-column-start: 2;
     grid-column-end: 3;
-    background-color: #fff;
+    background-color: #f98f8f;
     position: relative;
     top: 0%;
     transform-origin: center;
@@ -159,7 +159,7 @@ main #seconds {
 .circle {
     width: 50px;
     aspect-ratio: 1/1;
-    background-color: green;
+    background-color: rgb(161, 229, 161);
     border-radius: 50%;
     position: relative;
     transition: all 0.5s;
