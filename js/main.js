@@ -156,7 +156,7 @@ const secondWays = document.getElementById("secondBall");
 
 setInterval(() => {
   const thislikeWow = (new Date().getMinutes() / 60) * 100;
-  var randomColor = crayon[Math.floor(Math.random() * crayon.length)];
+  //var randomColor = crayon[Math.floor(Math.random() * crayon.length)];
   elementRotate.style.transform = "scale(" + "1" + thislikeWow + "%) ";
   secondWays.style.backgroundColor = randomColor;
 
@@ -176,7 +176,7 @@ setInterval(() => {
   var randomColor = "#" + Math.floor(Math.random() * 16777215).toString(16);
 
   rotateSecond.style.transform = "scale(" + "1" + thisisCrazy + "%) ";
-  randomBall.style.backgroundColor = randomColor;
+  // randomBall.style.backgroundColor = randomColor; This will help for finding a random colour.
   body.classList.toggle("white");
 
   if (rotateSecond.style.transform === "scale(1)") {
