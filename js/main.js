@@ -170,12 +170,16 @@ setInterval(() => {
 const rotateSecond = document.getElementById("ballMinute");
 const randomBall = document.getElementById("ball");
 
+var body = document.getElementsByTagName("body")[0];
+
 setInterval(() => {
   const thisisCrazy = (new Date().getSeconds() / 60) * 100;
   var randomColor = "#" + Math.floor(Math.random() * 16777215).toString(16);
 
   rotateSecond.style.transform = "scale(" + "1" + thisisCrazy + "%) ";
   randomBall.style.backgroundColor = randomColor;
+  body.classList.toggle("white");
+  bolo.classList.toggle("white");
 
   if (rotateSecond.style.transform === "scale(1)") {
     rotateSecond.style.transform = thisisCrazy;
