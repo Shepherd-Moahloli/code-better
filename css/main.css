@@ -11,6 +11,11 @@ body {
 }
 
 
+body.white {
+    background-color: #fff;
+}
+
+
 .night {
     background-color: #fff;
     color: #fff;
@@ -91,6 +96,10 @@ main #ball #ballMinute {
     margin: 0 auto;
     transition: all 0.5s ease-in;
     border-radius: 100%;
+}
+
+#ballMinute.white {
+    background-color: #fff;
 }
 /*
 @keyframes bounce {
