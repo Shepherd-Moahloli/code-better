@@ -98,9 +98,7 @@ main #ball #ballMinute {
     border-radius: 100%;
 }
 
-#ballMinute.white {
-    background-color: #fff;
-}
+
 /*
 @keyframes bounce {
     0%, 100%{

@@ -84,9 +84,6 @@ setInterval(() => {
   console.log(percent);
 }, 1000);
 
-const elementRotate = document.getElementById("smaller");
-
-const secondWays = document.getElementById("secondBall");
 /*
 var crayon = [
   "#FF6633",
@@ -153,6 +150,10 @@ var crayon = [
 */
 // how can I change the color of the second ball after a minute
 
+const elementRotate = document.getElementById("smaller");
+
+const secondWays = document.getElementById("secondBall");
+
 setInterval(() => {
   const thislikeWow = (new Date().getMinutes() / 60) * 100;
   var randomColor = crayon[Math.floor(Math.random() * crayon.length)];
@@ -162,15 +163,13 @@ setInterval(() => {
   if (elementRotate.style.transform === "scale(1)") {
     elementRotate.style.transform = "scale(0)";
   }
-  if (secondWays.style.backgroundColor == randomColor) {
-    secondWays = thislikeWow;
-  }
 }, 1000);
 
 const rotateSecond = document.getElementById("ballMinute");
 const randomBall = document.getElementById("ball");
 
 var body = document.getElementsByTagName("body")[0];
+var isWhite = true;
 
 setInterval(() => {
   const thisisCrazy = (new Date().getSeconds() / 60) * 100;
@@ -179,17 +178,24 @@ setInterval(() => {
   rotateSecond.style.transform = "scale(" + "1" + thisisCrazy + "%) ";
   randomBall.style.backgroundColor = randomColor;
   body.classList.toggle("white");
-  bolo.classList.toggle("white");
 
   if (rotateSecond.style.transform === "scale(1)") {
     rotateSecond.style.transform = thisisCrazy;
   }
+  if (isWhite) {
+    rotateSecond.style.backgroundColor = "white";
+    elementRotate.style.backgroundColor = "white";
+    inside.style.backgroundColor = "white";
 
-  console.log(
-    rotateSecond.style.transform,
-    elementRotate.style.transform,
-    percent
-  );
+    isWhite = false;
+  } else {
+    rotateSecond.style.backgroundColor = "black";
+    elementRotate.style.backgroundColor = "black";
+    inside.style.backgroundColor = "black";
+    isWhite = true;
+  }
+
+  console.log(rotateSecond.style.transform, elementRotate.style.transform);
 }, 1000);
 
 const inside = document.getElementById("insideBall");
@@ -202,5 +208,3 @@ setInterval(() => {
     inside.style.transform = "scale(0)";
   }
 }, 1000);
-
-console.log(inside);
